@@ -1,4 +1,4 @@
-<html>
+<html lang="en-US">
     <head>
         <title>Restaurants</title>
     </head>
@@ -103,7 +103,6 @@
             font-size:14pt;
             color: black;
             text-shadow:rgba(255, 122, 226, 0.705) 2px 2px 2px;
-
         }
         img{
             width:90%;
@@ -124,7 +123,7 @@
         div2{
             color:white;
             font-family:fantasy;
-            font-size:30pt;
+            font-size:20pt;
             
         }
         div1{
@@ -137,7 +136,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/template" id="cardtemplate">
         <div class="card">
             <h1> {{company_name}} </h1>
@@ -148,6 +147,7 @@
         </div>
     </script>
     
+
     <script>
         var data;
     
@@ -179,16 +179,27 @@
     
             output.innerHTML = build;
         }
-
     </script>
     <body onload="displayJSON()">
             <div class="parallax"></div>
             <div style="height:1000px;background: linear-gradient(black,rgba(0, 0, 0, 0.11))">
             <div class="header">
+	    <div id="google_translate_element"></div>
+	    <script type="text/javascript">
+	    function googleTranslateElementInit(){
+		new google.translate.TranslateElement({pageLanguage: 'en'},'google_translate_element');
+			}
+	    </script>
+	    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                     <div2 class= "container">
                             <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">About this data</button>
                             <div id="demo" class="collapse">
-                        Time Square is not only known for it’s amazing bright lights and loud commotion, but is also known for it’s great food. Times square is home to more than 300 restaurants which all have meals that are to die for. This dataset contains several food and beverage restaurants circulating the city. By using this data set you can research any restaurant in times square by searching up the sub-industry using the key provided. After you  have searched up a sub-industry, a card will appear containing the name, address, and the phone number of the restaurant. With this dataset you can explore many new places to dine with just a click of a button.
+                        Times Square is not only known for it’s amazing bright lights and loud commotion, but is also known for it’s great food.<br>
+			Times square is home to more than 300 restaurants which all have meals that are to die for. This dataset contains several<br>
+			food and beverage restaurants circulating the city. By using this data set you can research any restaurant in times square<br>
+			by searching up the sub-industry using the key provided. After you  have searched up a sub-industry, a card will appear<br> 
+			containing the name, address, and the phone number of the restaurant. With this dataset you can explore many new places<br>
+			to dine with just a click of a button.
                         <img src = "shot.jpg" >
                     </div>
                          </div2>
@@ -199,6 +210,7 @@
                          <p id = "message"></p>
                      <div1 id="output">
                      </div1>
+	
             </div>
     </body>
     
